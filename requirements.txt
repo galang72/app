@@ -21,6 +21,8 @@ django-debug-toolbar==4.4.6
 django-jazzmin==3.0.1
 djangorestframework==3.15.2
 filelock==3.18.0
+flask_wtf
+Flask-WTF==1.1.1
 Flask==2.3.2
 Flask-Bootstrap==3.3.7.1
 Flask-Migrate==4.0.5
