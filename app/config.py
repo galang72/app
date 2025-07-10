@@ -6,7 +6,7 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_ECHO = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URI')  # ← tambahkan ini
+    SQLALCHEMY_DATABASE_URI = os.getenv('mysql+pymysql://username:password@host:port/dbname')  # ← tambahkan ini
 
 class ProductionConfig(Config):
     """

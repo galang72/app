@@ -24,8 +24,6 @@ filelock==3.18.0
 Flask==2.3.2
 Flask-Login==0.6.3
 flask-marshmallow==1.3.0
-Flask-MySQL==1.6.0
-Flask-MySQLdb==2.0.0
 Flask-SQLAlchemy==3.0.5
 fonttools==4.58.5
 fsspec==2025.5.1
