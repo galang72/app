@@ -75,3 +75,4 @@ urllib3==2.4.0
 Werkzeug==2.2.3
 whitenoise==6.7.0
 gunicorn==21.2.0
+wtforms-sqlalchemy==0.4
