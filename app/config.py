@@ -1,6 +1,7 @@
 import os
 
-basedir = os.path.abspath(os.path.dirname(_file_))
+# Ganti basedir pakai os.getcwd() biar aman di Railway
+basedir = os.path.abspath(os.getcwd())
 
 class Config(object):
     SECRET_KEY = os.getenv('SECRET_KEY', 'devpeople-secret')
@@ -8,14 +9,11 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_ECHO = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'squadmaster.db')
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app', 'squadmaster.db')
 
 class ProductionConfig(Config):
-    """
-    Production configurations
-    """
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'squadmaster.db')
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app', 'squadmaster.db')
 
 app_config = {
     'development': DevelopmentConfig,
